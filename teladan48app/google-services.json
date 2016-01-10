@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_id": "teladan48-app",
+    "project_number": "16664934071",
+    "name": "Teladan48 App"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16664934071:android:20465a42f56dd0fb",
+        "client_id": "android:com.reidzeibel.teladan48app",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.reidzeibel.teladan48app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16664934071-1r1gs9ojtmnmkaq3otj3fjr29ejeock7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reidzeibel.teladan48app",
+            "certificate_hash": "5765871A20E8C97DC4031AF8F565A563A6B60D8E"
+          }
+        },
+        {
+          "client_id": "16664934071-5vjgo0f327q5dntm9fcjbkv0nr4m96hc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reidzeibel.teladan48app",
+            "certificate_hash": "45640A40D4C7A366A92DF6D7C303346D9BD55E15"
+          }
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}
