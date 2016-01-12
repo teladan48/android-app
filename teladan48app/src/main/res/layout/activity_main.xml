@@ -11,7 +11,18 @@
     tools:context="com.reidzeibel.teladan48app.MainActivity">
 
     <TextView
+        android:id="@+id/status"
         android:text="Hello World!"
+        android:layout_above="@+id/sign_in_button"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>
