@@ -5,6 +5,8 @@ package com.reidzeibel.teladan48app.api;
  */
 public class ApiConstants {
 
+    public static final String API_ENDPOINT = "https://api.teladan07.org/";
+
     public static final String API_LIST_USER = "users";
     public static final String API_USER_LOCATIONS = "user-locations";
     public static final String API_EVENTS = "events";
