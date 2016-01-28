@@ -51,4 +51,13 @@ public class User {
     public void setUpdated_at(String updated_at) {
         this.updated_at = updated_at;
     }
+
+    @Override
+    public String toString() {
+        return "id : " + getId() + "\r\n"
+                + "name : " + getName() + "\r\n"
+                + "email : " + getEmail() + "\r\n"
+                + "created_at : " + getCreated_at() + "\r\n"
+                + "updated_at : " + getUpdated_at() + "\r\n" + "\r\n";
+    }
 }

@@ -23,4 +23,15 @@ public class UserLocation extends User {
     public void setLocation_long(String location_long) {
         this.location_long = location_long;
     }
+
+    @Override
+    public String toString() {
+        return "id : " + getId() + "\r\n"
+                + "name : " + getName() + "\r\n"
+                + "email : " + getEmail() + "\r\n"
+                + "location_lat : " + getLocation_lat() + "\r\n"
+                + "location_long : " + getLocation_long() + "\r\n"
+                + "created_at : " + getCreated_at() + "\r\n"
+                + "updated_at : " + getUpdated_at() + "\r\n\r\n";
+    }
 }

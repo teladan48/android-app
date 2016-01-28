@@ -86,4 +86,17 @@ public class Event {
     public void setUser(User user) {
         this.user = user;
     }
+
+    @Override
+    public String toString() {
+        return "id : " + getId() + "\r\n"
+                + "user_id :" + getUser_id() + "\r\n"
+                + "name : " + getName() + "\r\n"
+                + "event_date : " + getEvent_date() + "\r\n"
+                + "event_description : " + getEvent_description() + "\r\n"
+                + "location : " + getLocation() + "\r\n"
+                + "created_at : " + getCreated_at() + "\r\n"
+                + "updated_at : " + getUpdated_at() + "\r\n"
+                + "user : " + getUser().toString();
+    }
 }

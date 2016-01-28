@@ -1,5 +1,7 @@
 package com.reidzeibel.teladan48app.api.model;
 
+import com.reidzeibel.teladan48app.util.Util;
+
 import java.util.List;
 
 /**
@@ -15,5 +17,10 @@ public class ListUserLocation {
 
     public void setUserLocationList(List<UserLocation> userLocationList) {
         this.userLocationList = userLocationList;
+    }
+
+    @Override
+    public String toString() {
+        return Util.listToString(getUserLocationList());
     }
 }

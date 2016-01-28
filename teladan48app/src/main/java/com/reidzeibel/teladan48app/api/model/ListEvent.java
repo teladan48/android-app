@@ -1,5 +1,7 @@
 package com.reidzeibel.teladan48app.api.model;
 
+import com.reidzeibel.teladan48app.util.Util;
+
 import java.util.List;
 
 /**
@@ -87,5 +89,18 @@ public class ListEvent {
 
     public void setData(List<Event> data) {
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return "total : " + getTotal() + "\r\n"
+                + "per_page : " + getPer_page() + "\r\n"
+                + "current_page : " + getCurrent_page() + "\r\n"
+                + "last_page : " + getLast_page() + "\r\n"
+                + "next_page_url : " + getNext_page_url() + "\r\n"
+                + "prev_page_url : " + getPrev_page_url() + "\r\n"
+                + "from : " + getFrom() + "\r\n"
+                + "to : " + getTo() + "\r\n"
+                + "data : " + "\r\n\r\n" + Util.listToString(getData());
     }
 }
