@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Teladan48 App</string>
+    
+    <string-array name="drawer_array">
+        <item>User</item>
+        <item>User Location</item>
+        <item>Events</item>
+    </string-array>
+
 </resources>
