@@ -3,6 +3,11 @@ package com.reidzeibel.teladan48app.api;
 import com.reidzeibel.teladan48app.api.model.Event;
 import com.reidzeibel.teladan48app.api.model.EventRequest;
 import com.reidzeibel.teladan48app.api.model.ListEvent;
+import com.reidzeibel.teladan48app.api.model.ListUserLocation;
+import com.reidzeibel.teladan48app.api.model.ListUsers;
+import com.reidzeibel.teladan48app.api.model.User;
+import com.reidzeibel.teladan48app.api.model.UserLocation;
+import com.reidzeibel.teladan48app.api.model.UserLocationRequest;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -16,6 +21,8 @@ import retrofit2.http.Path;
  * Created by Reidzeibel on 25/01/2016.
  */
 public interface Rest {
+
+    // Events API
 
     @GET("events")
     Call<ListEvent> getEvents();
@@ -31,4 +38,21 @@ public interface Rest {
 
     @DELETE("events/{id}")
     Call<Void> deleteEvent(@Path("id") int eventId);
+
+    // Users API
+
+    @GET("users")
+    Call<ListUsers> getUsers();
+
+    @GET("users/{id}")
+    Call<User> viewUser(@Path("id") int userId);
+
+    // User Location API
+
+    @GET("user-location")
+    Call<ListUserLocation> getUserLocation();
+
+    @PUT("user-location/{id}")
+    Call<UserLocation> updateLocation(@Path("id") int userId, UserLocationRequest requestBody);
+
 }
