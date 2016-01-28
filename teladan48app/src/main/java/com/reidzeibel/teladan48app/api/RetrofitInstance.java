@@ -2,8 +2,13 @@ package com.reidzeibel.teladan48app.api;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonSerializationContext;
+import com.google.gson.JsonSerializer;
 
 import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.List;
 
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -22,7 +27,6 @@ public class RetrofitInstance {
 
     private static final Gson gson = new GsonBuilder().create();
 
-
     private static final OkHttpClient defaultHttpClient = new OkHttpClient.Builder()
             .addInterceptor(
                     new Interceptor() {
@@ -34,10 +38,11 @@ public class RetrofitInstance {
                                     .addHeader("Cache-Control", "no-cache").build();
                             return chain.proceed(request);
                         }
-                    }).build();
+                    })
+            .build();
 
     public static Retrofit getInstance() {
-        if (retrofitInstance==null) {
+        if (retrofitInstance == null) {
             retrofitInstance = new Retrofit.Builder()
                     .baseUrl(ApiConstants.API_ENDPOINT)
                     .client(defaultHttpClient)
@@ -48,7 +53,7 @@ public class RetrofitInstance {
     }
 
     public static Rest get() {
-        if (service==null) {
+        if (service == null) {
             service = getInstance().create(Rest.class);
         }
         return service;

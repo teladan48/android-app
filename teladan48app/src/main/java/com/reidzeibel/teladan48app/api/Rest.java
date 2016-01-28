@@ -49,10 +49,10 @@ public interface Rest {
 
     // User Location API
 
-    @GET("user-location")
+    @GET("user-locations")
     Call<ListUserLocation> getUserLocation();
 
-    @PUT("user-location/{id}")
+    @PUT("user-locations/{id}")
     Call<UserLocation> updateLocation(@Path("id") int userId, UserLocationRequest requestBody);
 
 }
