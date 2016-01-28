@@ -106,6 +106,8 @@ public class MainActivity
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        mApiName.setText("");
+        mApiResult.setText("");
         switch (position) {
             case 0 :
                 mApiName.setText("USERS API");
